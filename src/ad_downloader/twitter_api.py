@@ -1,3 +1,5 @@
+import platform
+import sys
 from functools import cached_property
 from typing import Dict, Any
 
@@ -18,11 +20,24 @@ class TwitterApi:
         )
 
     @property
+    def __headers(self):
+        python_version = "{}.{}".format(sys.version_info.major, sys.version_info.minor)
+        user_agent = 'twitter-ads version: {} platform: Python {} ({}/{})'.format(
+            self.__cfg['version'],
+            python_version,
+            platform.python_implementation(),
+            sys.platform
+        )
+
+        return {'user-agent': user_agent}
+
+    @property
     def version(self):
-        return self.__cfg['version']
+        return self.__cfg['version'].split('.')[0]
 
     def get_accounts(self):
-        resp = self.__session.get(f'https://ads-api.twitter.com/{self.version}/accounts')
+        url = f'https://ads-api.twitter.com/{self.version}/accounts'
+        resp = self.__session.get(url, headers=self.__headers)
         resp.raise_for_status()
 
         data = resp.json()
