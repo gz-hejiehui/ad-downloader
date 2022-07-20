@@ -23,4 +23,7 @@ class TwitterApi:
 
     def get_accounts(self):
         resp = self.__session.get(f'https://ads-api.twitter.com/{self.version}/accounts')
-        print(resp.json())
+        resp.raise_for_status()
+
+        data = resp.json()
+        return data['data'] or []
