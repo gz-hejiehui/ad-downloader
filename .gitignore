@@ -1,8 +1,10 @@
 .idea
 .vscode
 .pytest_cache
+__pycache__
 venv
 build
 src/ad_downloader.egg-info
 config.toml
 main.py
+.data.json
