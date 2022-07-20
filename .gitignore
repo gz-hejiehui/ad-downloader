@@ -4,7 +4,7 @@
 __pycache__
 venv
 build
+test_data
 src/ad_downloader.egg-info
 config.toml
 main.py
-.data.json

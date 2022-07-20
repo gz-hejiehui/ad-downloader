@@ -42,3 +42,11 @@ class TwitterApi:
 
         data = resp.json()
         return data['data'] or []
+
+    def get_campaigns(self, account_id: str):
+        url = f'https://ads-api.twitter.com/{self.version}/accounts/{account_id}/campaigns'
+        resp = self.__session.get(url, headers=self.__headers)
+        resp.raise_for_status()
+
+        data = resp.json()
+        return data['data'] or []

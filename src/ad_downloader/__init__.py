@@ -28,3 +28,6 @@ class ADDownloader:
 
     def accounts(self):
         return self.__api.get_accounts()
+
+    def campaigns(self, account_id: str):
+        return self.__api.get_campaigns(account_id)
