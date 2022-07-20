@@ -1,3 +1,8 @@
 .idea
 .vscode
+.pytest_cache
 venv
+build
+src/ad_downloader.egg-info
+config.toml
+main.py
