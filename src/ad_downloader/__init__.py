@@ -1,4 +1,5 @@
 from enum import Enum
+from functools import cached_property
 from pathlib import Path
 
 from ad_downloader.twitter_api import TwitterApi
@@ -19,15 +20,7 @@ class Media(Enum):
 class ADDownloader:
     def __init__(self, config_path: str):
         self.__cfg = tomllib.loads(Path(config_path).read_text(encoding='utf-8'))
-        self.__api = None
 
-    def media(self, media: Media):
-        if media == Media.Twitter:
-            self.__api = TwitterApi(self.__cfg['twitter'])
-        return self
-
-    def accounts(self):
-        return self.__api.get_accounts()
-
-    def campaigns(self, account_id: str):
-        return self.__api.get_campaigns(account_id)
+    @cached_property
+    def twitter(self):
+        return TwitterApi(self.__cfg['twitter'])
