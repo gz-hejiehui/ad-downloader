@@ -1,0 +1,423 @@
+{
+  "data_type": "stats",
+  "time_series_length": 6,
+  "data": [
+    {
+      "id": "hpo6x",
+      "id_data": [
+        {
+          "segment": null,
+          "metrics": {
+            "impressions": null,
+            "tweets_send": null,
+            "billed_charge_local_micro": null,
+            "qualified_impressions": null,
+            "follows": null,
+            "app_clicks": null,
+            "retweets": null,
+            "unfollows": null,
+            "likes": null,
+            "engagements": null,
+            "clicks": null,
+            "card_engagements": null,
+            "poll_card_vote": null,
+            "replies": null,
+            "url_clicks": null,
+            "billed_engagements": null,
+            "carousel_swipes": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "hqwk7",
+      "id_data": [
+        {
+          "segment": null,
+          "metrics": {
+            "impressions": null,
+            "tweets_send": null,
+            "billed_charge_local_micro": null,
+            "qualified_impressions": null,
+            "follows": null,
+            "app_clicks": null,
+            "retweets": null,
+            "unfollows": null,
+            "likes": null,
+            "engagements": null,
+            "clicks": null,
+            "card_engagements": null,
+            "poll_card_vote": null,
+            "replies": null,
+            "url_clicks": null,
+            "billed_engagements": null,
+            "carousel_swipes": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "gsb7d",
+      "id_data": [
+        {
+          "segment": null,
+          "metrics": {
+            "impressions": null,
+            "tweets_send": null,
+            "billed_charge_local_micro": null,
+            "qualified_impressions": null,
+            "follows": null,
+            "app_clicks": null,
+            "retweets": null,
+            "unfollows": null,
+            "likes": null,
+            "engagements": null,
+            "clicks": null,
+            "card_engagements": null,
+            "poll_card_vote": null,
+            "replies": null,
+            "url_clicks": null,
+            "billed_engagements": null,
+            "carousel_swipes": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "gs8jg",
+      "id_data": [
+        {
+          "segment": null,
+          "metrics": {
+            "impressions": [
+              416022,
+              361246,
+              183799,
+              171407,
+              0,
+              0
+            ],
+            "tweets_send": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "billed_charge_local_micro": [
+              826014458,
+              703378339,
+              593440624,
+              567188628,
+              0,
+              0
+            ],
+            "qualified_impressions": null,
+            "follows": [
+              2,
+              3,
+              2,
+              1,
+              0,
+              0
+            ],
+            "app_clicks": [
+              770,
+              577,
+              479,
+              444,
+              0,
+              0
+            ],
+            "retweets": [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            "unfollows": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "likes": [
+              27,
+              27,
+              13,
+              10,
+              0,
+              0
+            ],
+            "engagements": [
+              2101,
+              1622,
+              1075,
+              1085,
+              0,
+              0
+            ],
+            "clicks": [
+              1163,
+              964,
+              581,
+              575,
+              0,
+              0
+            ],
+            "card_engagements": [
+              770,
+              577,
+              479,
+              444,
+              0,
+              0
+            ],
+            "poll_card_vote": null,
+            "replies": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "url_clicks": null,
+            "billed_engagements": [
+              412792,
+              356587,
+              182432,
+              170043,
+              0,
+              0
+            ],
+            "carousel_swipes": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "hpnsy",
+      "id_data": [
+        {
+          "segment": null,
+          "metrics": {
+            "impressions": null,
+            "tweets_send": null,
+            "billed_charge_local_micro": null,
+            "qualified_impressions": null,
+            "follows": null,
+            "app_clicks": null,
+            "retweets": null,
+            "unfollows": null,
+            "likes": null,
+            "engagements": null,
+            "clicks": null,
+            "card_engagements": null,
+            "poll_card_vote": null,
+            "replies": null,
+            "url_clicks": null,
+            "billed_engagements": null,
+            "carousel_swipes": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "hpxic",
+      "id_data": [
+        {
+          "segment": null,
+          "metrics": {
+            "impressions": null,
+            "tweets_send": null,
+            "billed_charge_local_micro": null,
+            "qualified_impressions": null,
+            "follows": null,
+            "app_clicks": null,
+            "retweets": null,
+            "unfollows": null,
+            "likes": null,
+            "engagements": null,
+            "clicks": null,
+            "card_engagements": null,
+            "poll_card_vote": null,
+            "replies": null,
+            "url_clicks": null,
+            "billed_engagements": null,
+            "carousel_swipes": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "gs859",
+      "id_data": [
+        {
+          "segment": null,
+          "metrics": {
+            "impressions": [
+              155721,
+              10300,
+              0,
+              0,
+              0,
+              0
+            ],
+            "tweets_send": null,
+            "billed_charge_local_micro": [
+              239100875,
+              7265040,
+              0,
+              0,
+              0,
+              0
+            ],
+            "qualified_impressions": null,
+            "follows": null,
+            "app_clicks": [
+              174,
+              13,
+              0,
+              0,
+              0,
+              0
+            ],
+            "retweets": null,
+            "unfollows": null,
+            "likes": [
+              10,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "engagements": [
+              580,
+              35,
+              0,
+              0,
+              0,
+              0
+            ],
+            "clicks": [
+              364,
+              15,
+              0,
+              0,
+              0,
+              0
+            ],
+            "card_engagements": [
+              174,
+              13,
+              0,
+              0,
+              0,
+              0
+            ],
+            "poll_card_vote": null,
+            "replies": null,
+            "url_clicks": null,
+            "billed_engagements": [
+              153859,
+              10235,
+              0,
+              0,
+              0,
+              0
+            ],
+            "carousel_swipes": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "gs8c1",
+      "id_data": [
+        {
+          "segment": null,
+          "metrics": {
+            "impressions": null,
+            "tweets_send": null,
+            "billed_charge_local_micro": null,
+            "qualified_impressions": null,
+            "follows": null,
+            "app_clicks": null,
+            "retweets": null,
+            "unfollows": null,
+            "likes": null,
+            "engagements": null,
+            "clicks": null,
+            "card_engagements": null,
+            "poll_card_vote": null,
+            "replies": null,
+            "url_clicks": null,
+            "billed_engagements": null,
+            "carousel_swipes": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "gqrlg",
+      "id_data": [
+        {
+          "segment": null,
+          "metrics": {
+            "impressions": null,
+            "tweets_send": null,
+            "billed_charge_local_micro": null,
+            "qualified_impressions": null,
+            "follows": null,
+            "app_clicks": null,
+            "retweets": null,
+            "unfollows": null,
+            "likes": null,
+            "engagements": null,
+            "clicks": null,
+            "card_engagements": null,
+            "poll_card_vote": null,
+            "replies": null,
+            "url_clicks": null,
+            "billed_engagements": null,
+            "carousel_swipes": null
+          }
+        }
+      ]
+    }
+  ],
+  "request": {
+    "params": {
+      "start_time": "2021-12-25T15:00:00Z",
+      "segmentation_type": null,
+      "entity_ids": [
+        "gqrlg",
+        "gs859",
+        "gs8c1",
+        "gs8jg",
+        "gsb7d",
+        "hpnsy",
+        "hpo6x",
+        "hpxic",
+        "hqwk7"
+      ],
+      "end_time": "2021-12-31T15:00:00Z",
+      "country": null,
+      "placement": "ALL_ON_TWITTER",
+      "granularity": "DAY",
+      "entity": "CAMPAIGN",
+      "platform": null,
+      "metric_groups": [
+        "BILLING",
+        "ENGAGEMENT"
+      ]
+    }
+  }
+}

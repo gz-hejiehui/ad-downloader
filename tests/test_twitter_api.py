@@ -63,3 +63,29 @@ class TestTwitterApi:
             assert list(item.keys()) == expect_keys
             assert isinstance(item['created_at'], datetime)
             assert isinstance(item['updated_at'], datetime)
+
+    def test_get_campaign_insights(self, mocked_responses):
+        mocked_account_id = '18ce55gbmoz'
+        mocked_responses.get(
+            f'https://ads-api.twitter.com/{self.api.version}/accounts/{mocked_account_id}/campaigns',
+            body=get_mocked_data('twitter_get_campaigns_data.json'),
+            status=200,
+            content_type="application/json",
+        )
+        mocked_responses.get(
+            f'https://ads-api.twitter.com/{self.api.version}/stats/accounts/{mocked_account_id}',
+            body=get_mocked_data('twitter_get_campaign_insights_data.json'),
+            status=200,
+            content_type="application/json",
+        )
+        start = datetime.strptime('2021-12-26', '%Y-%m-%d')
+        end = datetime.strptime('2021-12-31', '%Y-%m-%d')
+        actual = self.api.get_campaign_insights(mocked_account_id, start, end)
+
+        # 检查结果集数量
+        assert len(actual) == 6
+
+        # 检查字段是否齐全
+        expect_keys = ['campaign_id', 'time', 'impressions', 'clicks', 'spend']
+        for item in actual:
+            assert list(item.keys()) == expect_keys

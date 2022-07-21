@@ -76,7 +76,14 @@ class TwitterApi:
 
         return campaigns
 
-    def get_campaign_insights(self, account_id: str, start: datetime, end: datetime):
+    def get_campaign_insights(self, account_id: str, start: datetime, end: datetime) -> List[Dict[str, Any]]:
+        """
+        获取广告系列成效数据
+        :param account_id: 账号ID
+        :param start: 开始日期
+        :param end: 结束日期
+        :return:
+        """
         # 获取该账号下的广告系列ID
         campaigns = self.get_campaigns(account_id)
         campaign_ids = [campaign['id'] for campaign in campaigns]
@@ -120,7 +127,6 @@ class TwitterApi:
                     campaign_insights.append({
                         'campaign_id': item['id'],
                         'time': int((start + timedelta(days=n)).timestamp()),
-                        'this_date': (start + timedelta(days=n)).strftime('%Y-%m-%d'),
                         'impressions': impressions,
                         'clicks': clicks,
                         'spend': spend,
