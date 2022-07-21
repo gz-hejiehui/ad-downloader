@@ -1,0 +1,210 @@
+{
+  "request": {
+    "params": {
+      "account_id": "18ce55gbmq4"
+    }
+  },
+  "next_cursor": null,
+  "data": [
+    {
+      "name": "Eyou_lxysJP_jzh_JP_1219_follwer",
+      "budget_optimization": "CAMPAIGN",
+      "reasons_not_servable": [
+        "EXPIRED"
+      ],
+      "servable": false,
+      "purchase_order_number": null,
+      "effective_status": "EXPIRED",
+      "daily_budget_amount_local_micro": 600000000,
+      "funding_instrument_id": "13hzjy",
+      "duration_in_days": null,
+      "standard_delivery": true,
+      "total_budget_amount_local_micro": null,
+      "id": "gqrlg",
+      "entity_status": "ACTIVE",
+      "frequency_cap": null,
+      "currency": "USD",
+      "created_at": "2021-12-17T23:37:50Z",
+      "updated_at": "2021-12-23T03:26:47Z",
+      "deleted": false
+    },
+    {
+      "name": "eyou_lxysCBT_jzh_and_JP_1223_01",
+      "budget_optimization": "CAMPAIGN",
+      "reasons_not_servable": [
+        "PAUSED_BY_ADVERTISER"
+      ],
+      "servable": false,
+      "purchase_order_number": "",
+      "effective_status": "PAUSED",
+      "daily_budget_amount_local_micro": 1000000000,
+      "funding_instrument_id": "13hzjy",
+      "duration_in_days": null,
+      "standard_delivery": true,
+      "total_budget_amount_local_micro": null,
+      "id": "gs859",
+      "entity_status": "PAUSED",
+      "frequency_cap": null,
+      "currency": "USD",
+      "created_at": "2021-12-23T06:00:48Z",
+      "updated_at": "2021-12-26T16:02:42Z",
+      "deleted": false
+    },
+    {
+      "name": "eyou_PR_CBT_RT",
+      "budget_optimization": "CAMPAIGN",
+      "reasons_not_servable": [
+        "EXPIRED",
+        "PAUSED_BY_ADVERTISER"
+      ],
+      "servable": false,
+      "purchase_order_number": null,
+      "effective_status": "PAUSED",
+      "daily_budget_amount_local_micro": 200000000,
+      "funding_instrument_id": "13hzjy",
+      "duration_in_days": null,
+      "standard_delivery": true,
+      "total_budget_amount_local_micro": 600000000,
+      "id": "gs8c1",
+      "entity_status": "PAUSED",
+      "frequency_cap": null,
+      "currency": "USD",
+      "created_at": "2021-12-23T06:20:41Z",
+      "updated_at": "2021-12-23T09:56:21Z",
+      "deleted": false
+    },
+    {
+      "name": "eyou_PR_CBT_ install",
+      "budget_optimization": "CAMPAIGN",
+      "reasons_not_servable": [
+        "EXPIRED"
+      ],
+      "servable": false,
+      "purchase_order_number": null,
+      "effective_status": "EXPIRED",
+      "daily_budget_amount_local_micro": 1000000000,
+      "funding_instrument_id": "13hzjy",
+      "duration_in_days": null,
+      "standard_delivery": true,
+      "total_budget_amount_local_micro": 6000000000,
+      "id": "gs8jg",
+      "entity_status": "ACTIVE",
+      "frequency_cap": null,
+      "currency": "USD",
+      "created_at": "2021-12-23T06:50:20Z",
+      "updated_at": "2021-12-28T08:56:24Z",
+      "deleted": false
+    },
+    {
+      "name": "eyou_PR_CBT_RT_觸及",
+      "budget_optimization": "CAMPAIGN",
+      "reasons_not_servable": [
+        "EXPIRED"
+      ],
+      "servable": false,
+      "purchase_order_number": "",
+      "effective_status": "EXPIRED",
+      "daily_budget_amount_local_micro": 200000000,
+      "funding_instrument_id": "13hzjy",
+      "duration_in_days": null,
+      "standard_delivery": true,
+      "total_budget_amount_local_micro": 600000000,
+      "id": "gsb7d",
+      "entity_status": "ACTIVE",
+      "frequency_cap": null,
+      "currency": "USD",
+      "created_at": "2021-12-23T10:17:34Z",
+      "updated_at": "2021-12-23T10:17:34Z",
+      "deleted": false
+    },
+    {
+      "name": "eyou_mafia_fo",
+      "budget_optimization": "CAMPAIGN",
+      "reasons_not_servable": [
+        "PAUSED_BY_ADVERTISER"
+      ],
+      "servable": false,
+      "purchase_order_number": null,
+      "effective_status": "PAUSED",
+      "daily_budget_amount_local_micro": 600000000,
+      "funding_instrument_id": "13hzjy",
+      "duration_in_days": null,
+      "standard_delivery": true,
+      "total_budget_amount_local_micro": 10000000000,
+      "id": "hpnsy",
+      "entity_status": "PAUSED",
+      "frequency_cap": null,
+      "currency": "USD",
+      "created_at": "2022-05-03T04:30:30Z",
+      "updated_at": "2022-05-18T03:38:57Z",
+      "deleted": false
+    },
+    {
+      "name": "CBT2_網站",
+      "budget_optimization": "CAMPAIGN",
+      "reasons_not_servable": [
+        "EXPIRED",
+        "PAUSED_BY_ADVERTISER"
+      ],
+      "servable": false,
+      "purchase_order_number": null,
+      "effective_status": "PAUSED",
+      "daily_budget_amount_local_micro": 50000000,
+      "funding_instrument_id": "13hzjy",
+      "duration_in_days": null,
+      "standard_delivery": true,
+      "total_budget_amount_local_micro": 1000000000,
+      "id": "hpo6x",
+      "entity_status": "PAUSED",
+      "frequency_cap": null,
+      "currency": "USD",
+      "created_at": "2022-05-03T06:43:59Z",
+      "updated_at": "2022-05-11T03:11:01Z",
+      "deleted": false
+    },
+    {
+      "name": "eyou_PR_CBT2(複製)",
+      "budget_optimization": "CAMPAIGN",
+      "reasons_not_servable": [
+        "PAUSED_BY_ADVERTISER"
+      ],
+      "servable": false,
+      "purchase_order_number": null,
+      "effective_status": "PAUSED",
+      "daily_budget_amount_local_micro": 1000000000,
+      "funding_instrument_id": "13hzjy",
+      "duration_in_days": null,
+      "standard_delivery": true,
+      "total_budget_amount_local_micro": 10000000000,
+      "id": "hpxic",
+      "entity_status": "PAUSED",
+      "frequency_cap": null,
+      "currency": "USD",
+      "created_at": "2022-05-04T11:09:52Z",
+      "updated_at": "2022-05-11T03:10:55Z",
+      "deleted": false
+    },
+    {
+      "name": "CBT2_PV",
+      "budget_optimization": "CAMPAIGN",
+      "reasons_not_servable": [
+        "PAUSED_BY_ADVERTISER"
+      ],
+      "servable": false,
+      "purchase_order_number": "",
+      "effective_status": "PAUSED",
+      "daily_budget_amount_local_micro": 500000000,
+      "funding_instrument_id": "13hzjy",
+      "duration_in_days": null,
+      "standard_delivery": true,
+      "total_budget_amount_local_micro": 2500000000,
+      "id": "hqwk7",
+      "entity_status": "PAUSED",
+      "frequency_cap": null,
+      "currency": "USD",
+      "created_at": "2022-05-09T06:20:30Z",
+      "updated_at": "2022-05-11T03:10:56Z",
+      "deleted": false
+    }
+  ]
+}
