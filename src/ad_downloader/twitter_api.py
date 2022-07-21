@@ -84,21 +84,25 @@ class TwitterApi:
         :param end: 结束日期
         :return:
         """
-        # 获取该账号下的广告系列ID
+        # 检查日期范围
+        if (end - start).days + 1 > 7:
+            raise Exception('A maximum date range (end - start) of 7 days is allowed.')
+
+        # 获取该账号下的广告系列
         campaigns = self.get_campaigns(account_id)
-        campaign_ids = [campaign['id'] for campaign in campaigns]
 
         # 根据广告系列ID分批获取数据，每次处理20个广告系列
         campaign_insights = []
         url = f'https://ads-api.twitter.com/{self.version}/stats/accounts/{account_id}'
-        for i in range(0, len(campaign_ids), 20):
+        for i in range(0, len(campaigns), 20):
+            _campaigns = {campaign['id']: campaign for campaign in campaigns[i: i + 20]}
 
             # 获取api数据
             params = {
                 'start_time': start.strftime('%Y-%m-%d'),
                 'end_time': (end + timedelta(days=1)).strftime('%Y-%m-%d'),
                 'entity': 'CAMPAIGN',
-                'entity_ids': ','.join(campaign_ids[i: i + 20]),
+                'entity_ids': ','.join(_campaigns.keys()),
                 'granularity': 'DAY',
                 'metric_groups': 'BILLING,ENGAGEMENT',
                 'placement': 'ALL_ON_TWITTER',
@@ -124,12 +128,16 @@ class TwitterApi:
                     if sum([impressions, clicks, spend]) == 0:
                         continue
 
+                    campaign_id = item['id']
                     campaign_insights.append({
-                        'campaign_id': item['id'],
                         'time': int((start + timedelta(days=n)).timestamp()),
+                        'account_id': account_id,
+                        'campaign_id': campaign_id,
+                        'campaign_name': _campaigns[campaign_id]['name'],
                         'impressions': impressions,
                         'clicks': clicks,
                         'spend': spend,
+                        'currency': _campaigns[campaign_id]['currency'],
                     })
 
         return campaign_insights

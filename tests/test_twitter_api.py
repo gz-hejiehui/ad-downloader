@@ -86,6 +86,9 @@ class TestTwitterApi:
         assert len(actual) == 6
 
         # 检查字段是否齐全
-        expect_keys = ['campaign_id', 'time', 'impressions', 'clicks', 'spend']
+        expect_keys = [
+            'time', 'account_id', 'campaign_id', 'campaign_name', 'impressions', 'clicks', 'spend',
+            'currency'
+        ]
         for item in actual:
             assert list(item.keys()) == expect_keys
