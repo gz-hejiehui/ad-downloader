@@ -1,6 +1,5 @@
 from datetime import datetime
 from functools import cached_property
-from typing import List, Dict, Any
 
 import pytest
 import responses
@@ -44,3 +43,23 @@ class TestTwitterApi:
         for item in actual:
             assert list(item.keys()) == expect_keys
             assert isinstance(item['timezone_switch_at'], datetime)
+
+    def test_get_campaigns(self, mocked_responses):
+        mocked_account_id = '18ce55gbmoz'
+        mocked_responses.get(
+            f'https://ads-api.twitter.com/{self.api.version}/accounts/{mocked_account_id}/campaigns',
+            body=get_mocked_data('twitter_get_campaigns_data.json'),
+            status=200,
+            content_type="application/json",
+        )
+        actual = self.api.get_campaigns(mocked_account_id)
+
+        # 检查结果集数量
+        assert len(actual) == 9
+
+        # 检查字段是否齐全
+        expect_keys = ['id', 'name', 'status', 'currency', 'created_at', 'updated_at']
+        for item in actual:
+            assert list(item.keys()) == expect_keys
+            assert isinstance(item['created_at'], datetime)
+            assert isinstance(item['updated_at'], datetime)

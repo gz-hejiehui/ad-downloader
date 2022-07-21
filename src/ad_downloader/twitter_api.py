@@ -37,6 +37,7 @@ class TwitterApi:
         return self.__cfg['version'].split('.')[0]
 
     def get_accounts(self) -> List[Dict[str, Any]]:
+        """获取账号列表"""
         url = f'https://ads-api.twitter.com/{self.version}/accounts'
         resp = self.__session.get(url, headers=self.__headers)
         resp.raise_for_status()
@@ -55,13 +56,25 @@ class TwitterApi:
             })
         return accounts
 
-    def get_campaigns(self, account_id: str):
+    def get_campaigns(self, account_id: str) -> List[Dict[str, Any]]:
+        """获取广告系列列表"""
         url = f'https://ads-api.twitter.com/{self.version}/accounts/{account_id}/campaigns'
         resp = self.__session.get(url, headers=self.__headers)
         resp.raise_for_status()
 
-        data = resp.json()
-        return data['data'] or []
+        campaigns = []
+        data = resp.json()['data']
+        for item in data:
+            campaigns.append({
+                'id': item['id'],
+                'name': str(item['name']).strip(),
+                'status': item['entity_status'],
+                'currency': item['currency'],
+                'created_at': datetime.strptime(item['created_at'], '%Y-%m-%dT%H:%M:%SZ'),
+                'updated_at': datetime.strptime(item['created_at'], '%Y-%m-%dT%H:%M:%SZ'),
+            })
+
+        return campaigns
 
     def get_campaign_insights(self, account_id: str, start: datetime, end: datetime):
         # 获取该账号下的广告系列ID
