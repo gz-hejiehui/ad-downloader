@@ -9,7 +9,9 @@ setup(
     extras_require={
         'dev': [
             'build',
+            'coverage',
             'pytest',
+            'responses',
         ]
     },
 )

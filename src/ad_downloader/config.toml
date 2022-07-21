@@ -1,6 +1,6 @@
 [twitter]
-version = '11'
+version = '11.0.0'
 consumer_key = ''
 consumer_secret = ''
 access_token = ''
-accesstoken_secret = ''
+access_token_secret = ''

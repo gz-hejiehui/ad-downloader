@@ -2,7 +2,7 @@ import platform
 import sys
 from datetime import datetime, timedelta
 from functools import cached_property
-from typing import Dict, Any
+from typing import Dict, Any, List
 
 from requests_oauthlib import OAuth1Session
 
@@ -17,7 +17,7 @@ class TwitterApi:
             self.__cfg['consumer_key'],
             client_secret=self.__cfg['consumer_secret'],
             resource_owner_key=self.__cfg['access_token'],
-            resource_owner_secret=self.__cfg['accesstoken_secret'],
+            resource_owner_secret=self.__cfg['access_token_secret'],
         )
 
     @property
@@ -36,13 +36,24 @@ class TwitterApi:
     def version(self):
         return self.__cfg['version'].split('.')[0]
 
-    def get_accounts(self):
+    def get_accounts(self) -> List[Dict[str, Any]]:
         url = f'https://ads-api.twitter.com/{self.version}/accounts'
         resp = self.__session.get(url, headers=self.__headers)
         resp.raise_for_status()
 
-        data = resp.json()
-        return data['data'] or []
+        accounts = []
+        data = resp.json()['data']
+        for item in data:
+            accounts.append({
+                'id': item['id'],
+                'name': item['name'],
+                'business_id': item['business_id'],
+                'business_name': item['business_name'],
+                'timezone': item['timezone'],
+                'timezone_switch_at': datetime.strptime(item['timezone_switch_at'], '%Y-%m-%dT%H:%M:%SZ'),
+                'country_code': item['country_code'],
+            })
+        return accounts
 
     def get_campaigns(self, account_id: str):
         url = f'https://ads-api.twitter.com/{self.version}/accounts/{account_id}/campaigns'
