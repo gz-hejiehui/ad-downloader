@@ -6,6 +6,8 @@ from typing import Dict, Any, List
 
 from requests_oauthlib import OAuth1Session
 
+from ad_downloader.exception import DateRangeLimitError
+
 
 class TwitterApi:
     def __init__(self, config: Dict[str, Any]):
@@ -86,7 +88,7 @@ class TwitterApi:
         """
         # 检查日期范围
         if (end - start).days + 1 > 7:
-            raise Exception('A maximum date range (end - start) of 7 days is allowed.')
+            raise DateRangeLimitError('A maximum date range (end - start) of 7 days is allowed.')
 
         # 获取该账号下的广告系列
         campaigns = self.get_campaigns(account_id)

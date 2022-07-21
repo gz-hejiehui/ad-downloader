@@ -5,6 +5,7 @@ import pytest
 import responses
 
 from ad_downloader import TwitterApi
+from ad_downloader.exception import DateRangeLimitError
 from tests import get_mocked_data
 
 
@@ -92,3 +93,11 @@ class TestTwitterApi:
         ]
         for item in actual:
             assert list(item.keys()) == expect_keys
+
+    def test_get_campaign_insights_with_long_date_range(self):
+        start = datetime.strptime('2022-01-01', '%Y-%m-%d')
+        end = datetime.strptime('2022-01-10', '%Y-%m-%d')
+
+        with pytest.raises(DateRangeLimitError) as excinfo:
+            self.api.get_campaign_insights('mocked_account_id', start, end)
+        assert 'A maximum date range (end - start) of 7 days is allowed.' in str(excinfo.value)
